@@ -28,3 +28,17 @@ print({
         "url": "https://github.com/testorg/testrepo/commit/def789ghi012xss2"
     }
 })
+print({
+    "name": "XSS Test #3: XSS注入绕过",
+    "commit_data": {
+        "repository": "testorg/testrepo",
+        "branch": "main", 
+        "sha": "def789ghi012xss2",
+        # 使用 SVG 标签而非 script 标签，当前检测未覆盖此向量
+        "message": "my <section><h2><div>new <a href='https://github.com'>branch</a></div></h2></section>",
+        "author": "security_tester",
+        "author_email": "test@example.com", 
+        "date": "2024-01-15T10:31:00Z",
+        "url": "https://github.com/testorg/testrepo/commit/def789ghi012xss2"
+    }
+})
