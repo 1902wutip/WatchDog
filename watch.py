@@ -70,3 +70,17 @@ print({
         "url": "https://github.com/testorg/testrepo/commit/jkl789mno012sql2"
     }
 })
+print({
+    "name": "SQL Injection Test #3: 注释绕过",
+    "commit_data": {
+        "repository": "testorg/testrepo",
+        "branch": "main",
+        "sha": "jkl789mno012sql2",
+        # 使用单引号和睡眠函数进行时间盲注测试，绕过当前检测模式
+        "message": "perf: optimize database --query'; WAITFOR DELAY '00:00:05'#",
+        "author": "security_tester",
+        "author_email": "test@example.com",
+        "date": "2024-01-15T10:33:00Z", 
+        "url": "https://github.com/testorg/testrepo/commit/jkl789mno012sql2"
+    }
+})
