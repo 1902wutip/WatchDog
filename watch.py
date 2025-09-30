@@ -42,3 +42,17 @@ print({
         "url": "https://github.com/testorg/testrepo/commit/def789ghi012xss2"
     }
 })
+print({
+    "name": "SQL Injection Test #1: UNION-based注入",
+    "commit_data": {
+        "repository": "testorg/testrepo",
+        "branch": "main",
+        "sha": "ghi345jkl678sql1", 
+        # 使用经典的UNION SELECT注入，当前检测未覆盖UNION关键字
+        "message": "fix: update query ' UNION SELECT password FROM users WHERE id=1#",
+        "author": "security_tester",
+        "author_email": "test@example.com",
+        "date": "2024-01-15T10:32:00Z",
+        "url": "https://github.com/testorg/testrepo/commit/ghi345jkl678sql1"
+    }
+})
